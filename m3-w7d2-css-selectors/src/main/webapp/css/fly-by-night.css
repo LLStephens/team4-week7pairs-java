@@ -16,7 +16,7 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: grey;
+    background-color: #DCDCDC;
 }
 
 .banner > li {
@@ -32,7 +32,7 @@ html {
 
 .box {
    display: inline-block;
-    width: 250px;
+    width: 300px;
     margin: 10px;
     background-color: #E0FFFF;
     color: green;
@@ -40,11 +40,20 @@ html {
     vertical-align: top;
 }
 
+#savings{
+	position: relative;
+	
+}
+#checking{
+	position: relative;
+	
+}
+#loans{
+	position: relative;
+}
+
 .image {
-	display: inline-block;
-    width: 275px;
-    margin: 5px;
-    padding: 5px;
+	display: inline;
 }
 
 .footer {
@@ -52,7 +61,7 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: grey;
+    background-color: #DCDCDC;
 }
 
 .footer > li {
