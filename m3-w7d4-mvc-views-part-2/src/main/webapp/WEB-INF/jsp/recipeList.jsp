@@ -4,25 +4,87 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Recipe List View</title>
-    <link rel="stylesheet" href="css/site.css" />
+<meta name="viewport" content="width=device-width" />
+<title>Recipe List View</title>
+<link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-        </ul>
-        
-    </nav>
-    <section id="main-content">
+	<header>
+		<h1>MVC Exercises - Views Part 2: Models</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Tile Layout</a></li>
+			<li><a href="#">Table Layout</a></li>
+		</ul>
 
-       
-
-    </section>
+	</nav>
+	<section id="main-content">
+		<div id="listview"></div>
+		<p>Recipes</p>
+		<table>
+			<td></td>
+				<c:forEach var="recipe" items="${recipes}">
+					<c:choose>
+						<c:when test="${recipe.recipeId == 0}">
+							<td><img src="img/recipe0.jpg" height="72" width="72"></td>
+						</c:when>
+						<c:when test="${recipe.recipeId == 1}">
+							<td><img src="img/recipe1.jpg" height="72" width="72"></td>
+						</c:when>
+						<c:when test="${recipe.recipeId == 2}">
+							<td><img src="img/recipe2.jpg" height="72" width="72"></td>
+						</c:when>
+					</c:choose>
+				</c:forEach>
+			</tr>
+			<tr>
+				<td class="firstCol">Name</td>
+				<c:forEach var="recipe" items="${recipes}">
+					<td>${recipe.name}</td>
+				</c:forEach>
+			</tr>
+			<tr>
+				<td class="firstCol">Type</td>
+				<c:forEach var="recipe" items="${recipes}">
+					<td>${recipe.recipeType}</td>
+				</c:forEach>
+			</tr>
+			<tr>
+				<td class="firstCol">Cook Time</td>
+				<c:forEach var="recipe" items="${recipes}">
+					<td>${recipe.cookTimeInMinutes}</td>
+				</c:forEach>
+			</tr>
+			<tr>
+				<td class="firstCol">Ingredients</td>
+				<c:forEach var="recipe" items="${recipes}">
+					<td>${recipe.ingredients.size()}</td>
+				</c:forEach>
+			</tr>
+			<tr>
+				<td class="firstCol">Rating</td>
+				<c:forEach var="recipe" items="${recipes}">
+					<c:choose>
+						<c:when test="${recipe.averageRating >4}">
+							<td><img src="img/5-star.png" height="32" width="72"></td>
+						</c:when>
+						<c:when test="${recipe.averageRating > 3}">
+							<td><img src="img/4-star.png" height="32" width="72"></td>
+						</c:when>
+						<c:when test="${recipe.averageRating > 2}">
+							<td><img src="img/3-star.png" height="32" width="72"></td>
+						</c:when>
+						<c:when test="${recipe.averageRating > 1}">
+							<td><img src="img/2-star.png" height="32" width="72"></td>
+						</c:when>
+						<c:otherwise>
+							<td><img src="img/1-star.png" height="32" width="72"></td>
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+		</tr>
+		</table>
+	</section>
 </body>
 </html>
