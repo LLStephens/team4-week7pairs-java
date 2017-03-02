@@ -21,7 +21,19 @@
     </nav>
     <section id="main-content">
 
+       <ul>
+       <c:forEach var="recipe" items="${recipes}">
+       <table>
        
+       
+       
+       
+       
+       
+       </table>
+       		<li><c:out value="${recipe.name}"/></li>
+       </c:forEach>
+       </ul>
 
     </section>
 </body>
