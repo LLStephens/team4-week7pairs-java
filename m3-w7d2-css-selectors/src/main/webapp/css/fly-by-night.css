@@ -1,0 +1,81 @@
+html {
+	}
+	
+  body{
+    background-color: white;
+  }
+  
+ .head {
+	 background-color: black;
+	 color: white;
+	 padding: 10px;
+  }
+ 
+.banner {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #DCDCDC;
+}
+
+.banner > li {
+	float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: green;
+    border-right: 1px solid #000000; 
+}
+
+.box {
+   display: inline-block;
+    width: 300px;
+    margin: 10px;
+    background-color: #E0FFFF;
+    color: green;
+    padding: 10px;
+    vertical-align: top;
+}
+
+#savings{
+	position: relative;
+	
+}
+#checking{
+	position: relative;
+	
+}
+#loans{
+	position: relative;
+}
+
+.image {
+	display: inline;
+}
+
+.footer {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #DCDCDC;
+}
+
+.footer > li {
+	float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid #000000; 
+}
+
+</style>
+</head>
+<body>
+
