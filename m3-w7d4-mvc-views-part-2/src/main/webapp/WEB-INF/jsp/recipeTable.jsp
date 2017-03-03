@@ -1,9 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<jsp:include page="header.jsp">
-	<jsp:param name = "currentPage" value= "recipeList" />
+<jsp:include page="header.jsp" >
+	<jsp:param name = "currentPage" value="recipeTable" />
 </jsp:include>
-<jsp:include page="footer.jsp" />
+
 
 		<p id="title">Recipes</p>
 
@@ -20,7 +19,8 @@
 						<img class="image" src="img/recipe2.jpg" height="150" width="200">
 					</c:when>
 				</c:choose>
-				<p>${recipe.name}</p>
+				<c:url var="detailsURL" value="/recipeDetails" />
+				<p><a class="recipe" href="${detailsURL}">${recipe.name}</a></p>
 				<div class = "bottom-div">
 				<span class="bottomright">${recipe.ingredients.size()} ingredients</span>
 				
@@ -44,3 +44,4 @@
 				</div>
 			</div>
 		</c:forEach>
+<jsp:include page="footer.jsp" />

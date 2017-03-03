@@ -1,26 +1,33 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
+<jsp:include page="header.jsp">
+	<jsp:param name="currentPage" value="recipeList" />
+</jsp:include>
 
-<html>
-<head>
-<meta name="viewport" content="width=device-width" />
-<title>Recipe View</title>
-<link rel="stylesheet" href="css/site.css" />
-</head>
-<body>
-	<header>
-		<h1>MVC Exercises - Views Part 2: Models</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="#">Tile Layout</a></li>
-			<li><a href="#">Table Layout</a></li>
-		</ul>
-
-	</nav>
-	<section id="main-content">
+	<div id="details-image"><img src="img/recipe0.jpg" height="100" width="150"></div>
 	
-	</section>
-</body>
-</html>
+	<div class = "details-body">
+	<p id="title">${recipe.name}</p>
+	<p>${recipe.recipeType}</p>
+	<p>
+		<strong>Cook Time </strong>${recipe.cookTimeInMinutes} minutes
+	</p>
+	<p>${recipe.description}</p>
+	<p class="label">Ingredients</p>
+	
+	<c:forEach var="ingredient" items="${recipe.ingredients}">
+		<ul>
+			<li>${ingredient.quantity}${ingredient.name}</li>
+		</ul>
+	</c:forEach>
+	<hr></hr>
+	<p class="label">Preparation</p>
+	<c:forEach var="prep" items="${recipe.preparationSteps}">
+		<ol>
+			<li>${prep}</li>
+		</ol>
+	</c:forEach>
+	</div>
+
+
+<jsp:include page="footer.jsp" />
