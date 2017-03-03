@@ -76,6 +76,8 @@ section {
 .bottomleft {
 	font-size: 12px;
 	padding-left: 40px;
+	height: 15px; 
+	width: 72px;
 }
 
 .bottom-div{
@@ -112,6 +114,12 @@ td.firstCol {
 	font-weight: bold;
 }
 
+#image{
+	weight: 150px; 
+	width: 200px;
+}
+
+
 #details-image{
 	float: left;
 	height: 150px;
@@ -132,7 +140,9 @@ td.firstCol {
 	font-weight: bold;
 }
 
-
+.details-body > ul {
+	text-align: left;
+}
 
 
 

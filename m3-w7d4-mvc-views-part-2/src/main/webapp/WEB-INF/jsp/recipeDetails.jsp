@@ -5,7 +5,9 @@
 	<jsp:param name="currentPage" value="recipeList" />
 </jsp:include>
 
-	<div><img id="details-image" src="img/recipe0.jpg" ></div>
+	<div>
+	
+	<img id="details-image" src="img/recipe${recipe.recipeId}.jpg" ></div>
 	
 	<div class = "details-body">
 	<p id="title">${recipe.name}</p>
@@ -18,16 +20,18 @@
 	
 	<c:forEach var="ingredient" items="${recipe.ingredients}">
 		<ul>
-			<li>${ingredient.quantity}${ingredient.name}</li>
+			<li>${ingredient.quantity} ${ingredient.name}</li>
 		</ul>
 	</c:forEach>
 	<hr></hr>
 	<p class="label">Preparation</p>
+	<ol>
 	<c:forEach var="prep" items="${recipe.preparationSteps}">
-		<ol>
+		
 			<li>${prep}</li>
-		</ol>
+		
 	</c:forEach>
+	</ol>
 	</div>
 
 
