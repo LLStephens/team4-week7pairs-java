@@ -1,29 +1,44 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
+<jsp:include page="header.jsp"></jsp:include>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Page Title</title>
-    <link rel="stylesheet" href="site.css" />
-</head>
-<body>
-    <header>
-        <h1>Movie Detail</h1>
-    </header>
-    <nav>
-        <ul>
-        		<c:url var="movieListHref" value="/movieList" />
-            <li><a href="${movieListHref}">Movie List</a></li>
-            <li><a href="${movieListHref}">Nav Link 2</a></li>
-            <li><a href="${movieListHref}">Nav Link 3</a></li>
-            <li><a href="${movieListHref}">Nav Link 4</a></li>
-        </ul>
+<p>
+	<strong>${movie.name} (${movie.yearReleased})</strong>
+</p>
 
-    </nav>
-    <section id="main-content">
-        <p>Movie detail for movieId ${param.movieId} goes here. Use the request scoped variable <code>movie</code></p>
-    </section>
-</body>
-</html>
+<p>
+	<strong>Runtime:</strong> ${movie.runningTime} minutes
+</p>
+
+<p>${movie.description}</p>
+
+<p>
+	<strong>Cast:</strong>
+</p>
+
+<c:forEach var="actor" items="${movie.cast }">
+	<p>${actor}</p>
+</c:forEach>
+
+<p>
+	<strong>Show Times:</strong>
+</p>
+<table>
+	<tr>
+		<th>Start Time</th>
+		<th>Theater</th>
+	</tr>
+
+	<c:forEach var="time" items="${movie.showTimes }">
+		<tr>
+			<td>${time.startTime }</td>
+			<td>${time.theatre }</td>
+		</tr>
+	</c:forEach>
+</table>
+
+<p>
+	<a href="movieList">Back</a>
+</p>
+
+<jsp:include page="footer.jsp"></jsp:include>
