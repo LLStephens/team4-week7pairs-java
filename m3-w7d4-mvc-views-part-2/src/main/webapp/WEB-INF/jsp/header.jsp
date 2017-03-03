@@ -21,14 +21,14 @@
 	<nav>
 		<ul>
 			<c:set var="selected" value = "" />
-			<c:if test = "${param.currentPage = 'recipeList'}">
+			<c:if test = "${param.currentPage == 'recipeList'}">
 				<c:set var = "selected" value = "selected" />
 			</c:if>
 			
 			<c:url var = "listUrl" value = "/recipeList" />
 			<li><a class = "${selected}" href="${listUrl}">Recipe List</a></li>
 			
-			<c:url var = "tableUrl"value= "recipeTable" />
+			<c:url var = "tableUrl" value= "recipeTable" />
 			<li><a class="${selected}" href="${tableUrl}">Recipe Table</a></li>
 			
 		</ul>
