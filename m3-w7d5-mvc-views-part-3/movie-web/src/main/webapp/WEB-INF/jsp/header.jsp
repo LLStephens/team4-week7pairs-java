@@ -1,27 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Page Title</title>
-    <link rel="stylesheet" href="site.css" />
+<meta name="viewport" content="width=device-width" />
+<title>Page Title</title>
+<link rel="stylesheet" href="site.css" />
 </head>
 <body>
-    <header>
-        <h1>Movie Detail</h1>
-    </header>
-    <nav>
-        <ul>
-        		<c:url var="movieListHref" value="/movieList" />
-            <li><a href="${movieListHref}">Movie List</a></li>
-            <li><a href="${movieListHref}">Nav Link 2</a></li>
-            <li><a href="${movieListHref}">Nav Link 3</a></li>
-            <li><a href="${movieListHref}">Nav Link 4</a></li>
-        </ul>
+	<header>
+		<h1>Movie Detail</h1>
+	</header>
+	<nav>
+		<ul>
+			<c:url var="movieListHref" value="movieList" />
+			<li><a href="movieList">Movie List</a></li>
+			<li><a href="${movieListHref}">Nav Link 2</a></li>
+			<li><a href="${movieListHref}">Nav Link 3</a></li>
+			<li><a href="${movieListHref}">Nav Link 4</a></li>
+		</ul>
 
-    </nav>
-    <section id="main-content">
+	</nav>
+	<section id="main-content">
+>>>>>>> 5c0d73a12c1bf0a0a2ab773b68a1f00d0cfb2ce8
