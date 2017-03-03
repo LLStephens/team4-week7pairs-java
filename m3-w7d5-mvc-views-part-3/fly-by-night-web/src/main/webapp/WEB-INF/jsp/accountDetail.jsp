@@ -1,34 +1,37 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fly By Night Bank</title>
-  <link rel="stylesheet" href="site.css">
-</head>
-<body>
-  <header>
-    <img src="img/flybynightlogo.png" alt="Fly By Night Bank">
-    <p class="motto">At Fly By Night, we treat your money as if it's our own.</p>
-  </header>
-  <nav>
-	<ul>
-		<c:url var="homeHref" value="/" />
-		<li><a href="${homeHref}">Home</a></li>
-		<li><a href="#">Log In or Enroll</a></li>
-		<li><a href="#">Why Fly By Night</a></li>
-		<c:url var="accountList" value="/accountList" />
-		<li><a href="${accountList}">Bank Account List</a></li>
-	</ul>
-	</nav>
-	<section id="main-content">
-		
-		<p>Display details for account id ${param.accountId} here. Use the request scoped variable <code>account</code>.</p>
+<jsp:include page="header.jsp"></jsp:include>
 
-	</section>
-	<footer>
-        Fly By Night Bank | Varying Locations | josh@flybynightbank.com
-    </footer>
-	
-</body>
-</html>
+<p>
+	<%-- Display details for account id ${param.accountId} here. Use the request
+	scoped variable
+	<code>account</code>
+	. --%>
+	${account.name}
+</p>
+<p>
+	<strong>Balance </strong>${account.balance }</p>
+<p>
+	<strong>Account #</strong>${account.accountNumber}</p>
+<p>
+	<strong>Type </strong>${account.accountType }</p>
+<p>Transaction History</p>
+
+
+<table>
+	<tr>
+		<td>Date</td>
+		<td>Amount</td>
+		<td>Description</td>
+	</tr>
+	<c:forEach var="transaction" items="${account.transactionHistory}">
+		<tr>
+			<td>${transaction.transactionDate}</td>
+			<td>${transaction.amount}</td>
+			<td>${transaction.description}</td>
+		</tr>
+	</c:forEach>
+
+</table>
+<p> <a href="accountList">Back</a></p>
+<jsp:include page="footer.jsp"></jsp:include>
