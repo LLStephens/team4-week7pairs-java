@@ -57,7 +57,8 @@ section {
 	border-radius: 7px;
 }
 
-div {
+#first {
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
 	word-wrap: break-word;
@@ -68,17 +69,19 @@ div {
 }
 
 .bottomright{
-	position: absolute;
-	bottom: 660px;
 	font-size: 12px;
-	padding-left: 120px;
+	padding-left: 10px;
 }
 
 .bottomleft {
-	position: absolute;
-	bottom: 670px;
 	font-size: 12px;
-	margin-left: -100px;
+	padding-left: 40px;
+}
+
+.bottom-div{
+	vertical-align:bottom;
+	position: absolute;
+	bottom: 0px;
 }
 
 table {
