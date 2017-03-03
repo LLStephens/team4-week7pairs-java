@@ -18,7 +18,7 @@
 			<c:url var="detailsURL" value="/accountDetail">
 				<c:param name="accountId" value="${account.id}" />
 			</c:url>
-			<td><a class="details" href="${detailsURL}">View</a></td>
+			<td><a href="${detailsURL}">View</a></td>
 			<td>${account.name}</td>
 			<td>${account.accountNumber}</td>
 			<td>${account.balance}</td>

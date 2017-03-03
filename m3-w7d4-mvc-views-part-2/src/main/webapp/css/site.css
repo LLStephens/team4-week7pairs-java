@@ -112,16 +112,25 @@ td.firstCol {
 	font-weight: bold;
 }
 
-
-
 #details-image{
 	float: left;
+	height: 150px;
+	width: 200px;
+	padding: 10px;
 
 }
 
+.details-body > p, ul, ol {
+	text-align: left;
+}
 
+.details-body{
+	padding: 10px;
+}
 
-
+.label{
+	font-weight: bold;
+}
 
 
 
