@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width" />
+
 <c:set var = "title" value = "${param.title}" />
 <c:if test="${empty title }" >
 	<c:set var = "title" value ="Recipe Page" />
@@ -20,11 +21,6 @@
 	</header>
 	<nav>
 		<ul>
-			<c:set var="selected" value = "" />
-			<c:if test = "${param.currentPage == 'recipeList'}">
-				<c:set var = "selected" value = "selected" />
-			</c:if>
-			
 			<c:url var = "listUrl" value = "/recipeList" />
 			<li><a class = "${selected}" href="${listUrl}">Recipe List</a></li>
 			

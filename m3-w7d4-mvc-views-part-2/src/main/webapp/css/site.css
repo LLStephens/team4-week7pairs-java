@@ -63,7 +63,7 @@ section {
 	vertical-align: top;
 	word-wrap: break-word;
 	width: 200px;
-	height: 275px;
+	height: 250px;
 	margin: 10px;
 	background-color: #98FB98;
 }
@@ -119,6 +119,10 @@ td.firstCol {
 	width: 200px;
 }
 
+.div-image{
+	height: 150px; 
+	width: 200px;
+}
 
 #details-image{
 	float: left;

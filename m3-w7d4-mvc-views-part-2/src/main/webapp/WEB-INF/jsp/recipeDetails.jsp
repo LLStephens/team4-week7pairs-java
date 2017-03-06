@@ -10,11 +10,10 @@
 	<img id="details-image" src="img/recipe${recipe.recipeId}.jpg" ></div>
 	
 	<div class = "details-body">
+	
 	<p id="title">${recipe.name}</p>
 	<p>${recipe.recipeType}</p>
-	<p>
-		<strong>Cook Time </strong>${recipe.cookTimeInMinutes} minutes
-	</p>
+	<p><strong>Cook Time </strong>${recipe.cookTimeInMinutes} minutes</p>
 	<p>${recipe.description}</p>
 	<p class="label">Ingredients</p>
 	

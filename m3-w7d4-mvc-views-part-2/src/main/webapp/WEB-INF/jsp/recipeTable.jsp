@@ -10,13 +10,13 @@
 			<div id="first">
 				<c:choose>
 					<c:when test="${recipe.recipeId == 0}">
-						<img class="image" src="img/recipe0.jpg">
+						<img class="div-image" src="img/recipe0.jpg">
 					</c:when>
 					<c:when test="${recipe.recipeId == 1}">
-						<img class="image" src="img/recipe1.jpg">
+						<img class="div-image" src="img/recipe1.jpg">
 					</c:when>
 					<c:when test="${recipe.recipeId == 2}">
-						<img class="image" src="img/recipe2.jpg">
+						<img class="div-image" src="img/recipe2.jpg">
 					</c:when>
 				</c:choose>
 				<c:url var="detailsURL" value="/recipeDetails">
